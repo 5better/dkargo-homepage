@@ -3,10 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:local": "next dev",
+    "dev": "env-cmd -f .env.development next dev",
+    "dev:staging": "env-cmd -f .env.staging next dev",
+    "dev:test": "env-cmd -f .env.test next dev",
+    "dev:prod": "env-cmd -f .env.production next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "generate": "./scripts/make-models.sh && npm run format && npm run lint:fix",
+    "format": "prettier --write --config ./.prettierrc \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "lint": "next lint",
+    "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx,js,jsx}\"",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ]
   },
   "dependencies": {
     "@types/node": "20.6.0",
@@ -36,6 +51,8 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "sass": "^1.66.1"
   }
