@@ -15,7 +15,7 @@ export function middleware(req: NextRequest) {
     req.nextUrl.pathname.indexOf('chrome') > -1
   )
     return NextResponse.next();
-  let lng: string | null;
+  let lng: string | null = fallbackLng;
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value);
   if (!lng) lng = acceptLanguage.get(req.headers.get('Accept-Language'));
@@ -32,7 +32,13 @@ export function middleware(req: NextRequest) {
   }
 
   if (req.headers.has('referer')) {
-    const refererUrl = new URL(req.headers.get('referer'));
+    const referer = req.headers.get('referer');
+
+    if (!referer) {
+      throw new Error('Referer header is missing');
+    }
+
+    const refererUrl = new URL(referer);
     const lngInReferer = languages.find((l) =>
       refererUrl.pathname.startsWith(`/${l}`),
     );

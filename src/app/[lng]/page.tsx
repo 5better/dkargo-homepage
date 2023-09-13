@@ -2,7 +2,6 @@ import { Trans } from 'react-i18next/TransWithoutContext';
 import { languages, fallbackLng } from '../i18n/settings';
 import { useTranslation } from '../i18n';
 import { Footer } from './components/Footer';
-
 export default async function Page({
   params: { lng },
 }: {
@@ -12,7 +11,7 @@ export default async function Page({
 }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
-
+  // fetch('https://...', { cache: 'force-cache' }) //caching data fetching
   return (
     <>
       <main>
@@ -23,6 +22,8 @@ export default async function Page({
             </Trans>
           </h2>
         </div>
+        <div>Responsive Web</div>
+        <div>Responsive Web</div>
         <div>Responsive Web</div>
       </main>
       <Footer lng={lng} />
