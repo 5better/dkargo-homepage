@@ -14,7 +14,7 @@ export const FooterBase = ({
 }) => {
   const t = i18n.getFixedT(lng, 'footer');
   return (
-    <footer>
+    <footer className={'text-3xl'}>
       <Trans i18nKey="languageSwitcher" t={t}>
         {/* @ts-expect-error Trans interpolation */}
         Language: <Link href={`/${lng}${path}`}>{{ lng }}</Link>

@@ -16,16 +16,18 @@ export default async function Page({
   return (
     <>
       <main>
-        <div className="flex flex-column">
-          <h2 className="bg-red-500">
-            <Trans t={t} i18nKey="title" className="font-bold">
+        <div className={'flex flex-row text-5xl'}>
+          <h2>
+            <Trans t={t} i18nKey="title">
               This is Next.js 13 Template.
             </Trans>
           </h2>
         </div>
-        <div>Responsive Web</div>
-        <div>Responsive Web</div>
-        <div>Responsive Web</div>
+        <div className={'flex gap-1 justify-center'}>
+          <div className={'w-3/6 h-20 bg-amber-500'}>Responsive</div>
+          <div className={'w-20 h-20 bg-amber-500'}>Responsive</div>
+          <div className={'w-20 h-20 bg-amber-500'}>Responsive</div>
+        </div>
       </main>
       <Footer lng={lng} />
     </>
