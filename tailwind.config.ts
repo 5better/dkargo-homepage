@@ -12,6 +12,10 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(fom 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      // screens: {
+      //   mobile: '375px',
+      //   pc: '1280px',
+      // }, //추후 디자인에 따라 수정
     },
   },
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],

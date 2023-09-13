@@ -11,13 +11,14 @@ export default async function Page({
 }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
-  // fetch('https://...', { cache: 'force-cache' }) //caching data fetching
+  //const data = await fetch('https://...', { cache: 'force-cache' }, { next: { revalidate: 3600 }) cache, revalidate option
+
   return (
     <>
       <main>
-        <div>
-          <h2>
-            <Trans t={t} i18nKey="title">
+        <div className="flex flex-column">
+          <h2 className="bg-red-500">
+            <Trans t={t} i18nKey="title" className="font-bold">
               This is Next.js 13 Template.
             </Trans>
           </h2>
