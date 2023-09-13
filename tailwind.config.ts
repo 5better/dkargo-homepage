@@ -1,20 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+
+    // Or if using `src` directory:
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Pretendard'],
-      },
-      // screens: {
-      //   mobile: '375px',
-      //   pc: '1280px',
-      // }, //추후 디자인에 따라 수정
-    },
+    extend: {},
   },
-  // plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  // screens: {
+  //   mobile: '375px',
+  //   tablet: '720px',
+  //   laptop: '1280px',
+  //   desktop: '1440px',
+  // }, //추후 디자인에 따라 수정
+  plugins: [],
 };

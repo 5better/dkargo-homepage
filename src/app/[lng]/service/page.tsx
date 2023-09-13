@@ -1,10 +1,19 @@
 import { Trans } from 'react-i18next/TransWithoutContext';
-import { languages, fallbackLng } from '../i18n/settings';
-import { useTranslation } from '../i18n';
-import { Footer } from './components/Footer';
+import { languages, fallbackLng } from '../../i18n/settings';
+import { useTranslation } from '../../i18n';
+
+// export function generateStaticParams() {
+//   return [{ slug: ['a', '1'] }, { slug: ['b', '2'] }, { slug: ['c', '3'] }];
+// }
+
+// Three versions of this page will be statically generated
+// using the `params` returned by `generateStaticParams`
+// - /product/a/1
+// - /product/b/2
+// - /product/c/3
 
 export default async function Page({
-  //Landing page
+  //Service page
   params: { lng },
 }: {
   params: {
@@ -21,7 +30,7 @@ export default async function Page({
         <div className={'flex flex-row text-5xl'}>
           <h2>
             <Trans t={t} i18nKey="title">
-              This is Next.js 13 Template.
+              Service Page
             </Trans>
           </h2>
         </div>
@@ -31,7 +40,6 @@ export default async function Page({
           <div className={'w-20 h-20 bg-amber-500'}>Responsive</div>
         </div>
       </main>
-      <Footer lng={lng} />
     </>
   );
 }
