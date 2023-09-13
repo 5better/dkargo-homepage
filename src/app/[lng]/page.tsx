@@ -2,7 +2,9 @@ import { Trans } from 'react-i18next/TransWithoutContext';
 import { languages, fallbackLng } from '../i18n/settings';
 import { useTranslation } from '../i18n';
 import { Footer } from './components/Footer';
+
 export default async function Page({
+  //index page
   params: { lng },
 }: {
   params: {
