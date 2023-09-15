@@ -10,6 +10,8 @@ interface TransProps {
   children: PropsWithChildren;
 }
 
-function Translation({ lng, children }: TransProps) {
+function TransComponent({ lng, children }: TransProps) {
   return <Trans>{children}</Trans>;
 }
+
+export default TransComponent;

@@ -20,15 +20,15 @@ export default async function Home({
   return (
     <>
       <Header>
-        <main>
-          <h2>
-            <Trans t={t} i18nKey="title">
-              This is Next.js 13 Template.
-            </Trans>
-          </h2>
-          <VerticalFeatures />
-        </main>
+        <h2>
+          <Trans t={t} i18nKey="title">
+            This is Next.js 13 Template.
+          </Trans>
+        </h2>
       </Header>
+      <main>
+        <VerticalFeatures />
+      </main>
       <Footer lng={lng} />
     </>
   );

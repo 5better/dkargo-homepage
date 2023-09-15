@@ -1,5 +1,8 @@
 import VerticalFeatureRow from './VerticalFeatureRow';
 import { Section } from '@/components/layout/Section';
+import Feature1 from 'public/assets/images/feature1.svg';
+import Feature2 from 'public/assets/images/feature2.svg';
+import Feature3 from 'public/assets/images/feature3.svg';
 
 function VerticalFeatures() {
   return (
@@ -10,21 +13,18 @@ function VerticalFeatures() {
       <VerticalFeatureRow
         title="Title Title"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-        image="/assets/images/feature.svg"
-        imageAlt="First feature alt text"
+        image={<Feature1 />}
       />
       <VerticalFeatureRow
         title="Title Title"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-        image="/assets/images/feature2.svg"
-        imageAlt="Second feature alt text"
+        image={<Feature2 />}
         reverse
       />
       <VerticalFeatureRow
         title="Title Title"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-        image="/assets/images/feature3.svg"
-        imageAlt="Third feature alt text"
+        image={<Feature3 />}
       />
     </Section>
   );
