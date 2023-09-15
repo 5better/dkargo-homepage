@@ -72,6 +72,25 @@ body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-html {
-  font-size: 62.5%;
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  max-width: 1520px;
+  height: 70px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  padding: 3rem 0;
 }

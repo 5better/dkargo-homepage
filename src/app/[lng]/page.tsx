@@ -1,9 +1,11 @@
 import { Trans } from 'react-i18next/TransWithoutContext';
 import { languages, fallbackLng } from '../i18n/settings';
 import { useTranslation } from '../i18n';
+import Header from './components/Header';
 import { Footer } from './components/Footer';
+import VerticalFeatures from './components/Feature/VerticalFeatures';
 
-export default async function Page({
+export default async function Home({
   //Landing page
   params: { lng },
 }: {
@@ -17,20 +19,16 @@ export default async function Page({
 
   return (
     <>
-      <main>
-        <div className={'flex flex-row text-5xl'}>
+      <Header>
+        <main>
           <h2>
             <Trans t={t} i18nKey="title">
               This is Next.js 13 Template.
             </Trans>
           </h2>
-        </div>
-        <div className={'flex gap-1 justify-center'}>
-          <div className={'w-3/6 h-20 bg-amber-500'}>Responsive</div>
-          <div className={'w-20 h-20 bg-amber-500'}>Responsive</div>
-          <div className={'w-20 h-20 bg-amber-500'}>Responsive</div>
-        </div>
-      </main>
+          <VerticalFeatures />
+        </main>
+      </Header>
       <Footer lng={lng} />
     </>
   );
