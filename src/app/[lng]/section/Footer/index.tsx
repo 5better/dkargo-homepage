@@ -1,5 +1,5 @@
-import { useTranslation } from '@/app/i18n';
 import { FooterBase } from './FooterBase';
+import { useTranslation } from '@/app/i18n';
 
 export const Footer = async ({ lng, path }: { lng: string; path?: string }) => {
   const { t, i18n } = await useTranslation(lng, 'footer');

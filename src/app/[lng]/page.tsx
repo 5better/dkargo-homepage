@@ -1,9 +1,10 @@
-import { Trans } from 'react-i18next/TransWithoutContext';
-import { languages, fallbackLng } from '../i18n/settings';
 import { useTranslation } from '../i18n';
-import Header from './components/Header';
-import { Footer } from './components/Footer';
-import VerticalFeatures from './components/Feature/VerticalFeatures';
+import { languages, fallbackLng } from '../i18n/settings';
+import VerticalFeatures from './section/Feature/VerticalFeatures';
+import { Footer } from './section/Footer';
+import Header from './section/Header';
+import Hero from './section/Hero';
+import { Trans } from 'react-i18next/TransWithoutContext';
 
 export default async function Home({
   //Landing page
@@ -19,14 +20,13 @@ export default async function Home({
 
   return (
     <>
-      <Header>
-        <h2>
-          <Trans t={t} i18nKey="title">
-            This is Next.js 13 Template.
-          </Trans>
-        </h2>
+      <Header lng={lng}>
+        <Trans t={t} i18nKey="title">
+          This is Next.js 13 Template.
+        </Trans>
       </Header>
       <main>
+        <Hero />
         <VerticalFeatures />
       </main>
       <Footer lng={lng} />

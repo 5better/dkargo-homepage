@@ -1,21 +1,21 @@
+import { languages } from '../../../i18n/settings';
 import { i18n } from 'i18next';
 import Link from 'next/link';
+import LogoImg from 'public/assets/images/logo_white.svg';
 import { Trans } from 'react-i18next/TransWithoutContext';
-import { languages } from '../../../i18n/settings';
 
-export const FooterBase = ({
-  i18n,
-  lng,
-  path = '',
-}: {
+interface FooterLangProps {
   i18n: i18n;
   lng: string;
   path?: string;
-}) => {
+}
+
+export const FooterBase = ({ i18n, lng, path = '' }: FooterLangProps) => {
   const t = i18n.getFixedT(lng, 'footer');
   return (
     <footer className={'text-3xl'}>
-      <Trans i18nKey="languageSwitcher" t={t}>
+      <LogoImg />
+      <Trans i18nKey="languageSetting" t={t}>
         {/* @ts-expect-error Trans interpolation */}
         Language: <Link href={`/${lng}${path}`}>{{ lng }}</Link>
       </Trans>

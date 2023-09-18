@@ -1,5 +1,5 @@
 import VerticalFeatureRow from './VerticalFeatureRow';
-import { Section } from '@/components/layout/Section';
+import Section from '@/components/layout/Section';
 import Feature1 from 'public/assets/images/feature1.svg';
 import Feature2 from 'public/assets/images/feature2.svg';
 import Feature3 from 'public/assets/images/feature3.svg';

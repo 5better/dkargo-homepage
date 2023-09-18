@@ -9,4 +9,5 @@ module.exports = {
   orderedImports: true,
   bracketSpacing: true,
   jsxBracketSameLine: false,
+  plugins: [require.resolve('@trivago/prettier-plugin-sort-imports')],
 };

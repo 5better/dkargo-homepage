@@ -1,9 +1,13 @@
 interface Resources {
   'client-page': {
-    title: 'This is Next.js 13 Template';
+    title: 'next 13 템플릿 입니다.';
+  };
+  header: {
+    about: '기업소개';
+    service: '서비스';
   };
   footer: {
-    languageSwitcher: 'Laguage setting: ';
+    languageSetting: 'Laguage setting: ';
   };
 }
 

@@ -78,19 +78,24 @@ main {
   flex: 1;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 100px;
 }
 
 header {
-  width: 100%;
-  max-width: 1520px;
-  height: 70px;
+  width: 100vw;
+  height: 100px;
+  padding: 20px 200px;
+  background-color: #000;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
 }
 
 footer {
-  background-color: rgba(255, 255, 255, 0.5);
   width: 100vw;
-  padding: 3rem 0;
+  height: 400px;
+  padding: 3rem 200px;
+  background-color: #000;
+  color: #fff;
 }
