@@ -4,10 +4,10 @@ import VerticalFeatures from './section/Feature/VerticalFeatures';
 import { Footer } from './section/Footer';
 import Header from './section/Header';
 import Hero from './section/Hero';
+import Tr from '@/components/Translation';
 import { Trans } from 'react-i18next/TransWithoutContext';
 
 export default async function Home({
-  //Landing page
   params: { lng },
 }: {
   params: {
@@ -16,11 +16,11 @@ export default async function Home({
 }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
-  //const data = await fetch('https://...', { cache: 'force-cache' }, { next: { revalidate: 3600 }) cache, revalidate option
 
   return (
     <>
       <Header lng={lng}>
+        <Tr lng={lng} key="title" />
         <Trans t={t} i18nKey="title" />
       </Header>
       <main>

@@ -28,11 +28,7 @@ export default async function Page({
     <>
       <main>
         <div className={'flex flex-row text-5xl'}>
-          <h2>
-            <Trans t={t} i18nKey="title">
-              Service Page
-            </Trans>
-          </h2>
+          <Trans t={t} i18nKey="title" />
         </div>
         <div className={'flex gap-1 justify-center'}>
           <div className={'w-3/6 h-20 bg-amber-500'}>Responsive</div>
