@@ -7,12 +7,7 @@ type SectionProps = {
   children: ReactNode;
 };
 
-function Section({
-  title,
-  description = '',
-  yPadding,
-  children,
-}: SectionProps) {
+function Section({ title, description, yPadding, children }: SectionProps) {
   return (
     <div
       className={`mx-auto max-w-screen-lg px-3 ${

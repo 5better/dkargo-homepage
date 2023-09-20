@@ -21,9 +21,7 @@ export default async function Home({
   return (
     <>
       <Header lng={lng}>
-        <Trans t={t} i18nKey="title">
-          This is Next.js 13 Template.
-        </Trans>
+        <Trans t={t} i18nKey="title" />
       </Header>
       <main>
         <Hero />

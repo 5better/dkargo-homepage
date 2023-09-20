@@ -7,7 +7,7 @@ interface Resources {
     service: '서비스';
   };
   footer: {
-    languageSetting: 'Laguage setting: ';
+    languageSetting: '언어 설정:';
   };
 }
 

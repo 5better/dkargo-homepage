@@ -13,7 +13,7 @@ interface HeaderLangProps {
 function HeaderLang({ i18n, lng, path = '' }: HeaderLangProps) {
   const t = i18n.getFixedT(lng, 'header');
   const handleLangChange = () => {
-    console.log('ko, en');
+    console.log(lng);
   };
 
   return (
