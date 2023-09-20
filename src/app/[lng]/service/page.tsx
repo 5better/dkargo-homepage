@@ -1,6 +1,6 @@
-import { Trans } from 'react-i18next/TransWithoutContext';
-import { languages, fallbackLng } from '../../i18n/settings';
 import { useTranslation } from '../../i18n';
+import { languages, fallbackLng } from '../../i18n/settings';
+import { Trans } from 'react-i18next/TransWithoutContext';
 
 // export function generateStaticParams() {
 //   return [{ slug: ['a', '1'] }, { slug: ['b', '2'] }, { slug: ['c', '3'] }];

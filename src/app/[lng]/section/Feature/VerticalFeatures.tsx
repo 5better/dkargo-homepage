@@ -7,7 +7,7 @@ import Feature3 from 'public/assets/images/feature3.svg';
 function VerticalFeatures() {
   return (
     <Section
-      title="바뀌는지 보자구요"
+      title="Homepage Template Title"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
     >
       <VerticalFeatureRow

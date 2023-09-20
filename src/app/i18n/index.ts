@@ -1,8 +1,8 @@
+import { getOptions } from './settings';
 import { createInstance, Namespace, FlatNamespace, KeyPrefix } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
-import { initReactI18next } from 'react-i18next/initReactI18next';
 import { FallbackNs } from 'react-i18next';
-import { getOptions } from './settings';
+import { initReactI18next } from 'react-i18next/initReactI18next';
 
 const initI18next = async (lng: string, ns: string | string[]) => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel

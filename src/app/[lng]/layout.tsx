@@ -1,8 +1,8 @@
+import { languages } from '@/app/i18n/settings';
 import '@/styles/globals.scss';
+import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { dir } from 'i18next';
-import { languages } from '../i18n/settings';
 
 const inter = Inter({ subsets: ['latin'] });
 

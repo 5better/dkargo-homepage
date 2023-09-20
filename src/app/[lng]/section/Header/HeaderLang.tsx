@@ -24,7 +24,9 @@ function HeaderLang({ i18n, lng, path = '' }: HeaderLangProps) {
         .map((l, index) => {
           return (
             <span key={l}>
-              <Link href={`/${l}${path}`}>{l}</Link>
+              <Link href={`/${l}${path}`} scroll={false}>
+                {l}
+              </Link>
             </span>
           );
         })}

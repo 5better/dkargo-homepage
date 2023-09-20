@@ -10,12 +10,12 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // screens: {  //TODO: 기획, 디자인에 따라 변경
+    //   mobile: { min: '390px', max: '819px' },
+    //   tablet: { min: '820px', max: '1023px' },
+    //   laptop: { min: '1024px', max: '1279px' },
+    //   desktop: { min: '1280px' },
+    // },
   },
-  // screens: {
-  //   mobile: '375px',
-  //   tablet: '720px',
-  //   laptop: '1280px',
-  //   desktop: '1440px',
-  // }, //추후 디자인에 따라 수정
   plugins: [],
 };

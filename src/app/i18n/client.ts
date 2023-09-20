@@ -1,7 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { getOptions, languages, cookieName } from './settings';
 import i18next, { FlatNamespace, KeyPrefix } from 'i18next';
+// import LocizeBackend from 'i18next-locize-backend'
+import LanguageDetector from 'i18next-browser-languagedetector';
+import resourcesToBackend from 'i18next-resources-to-backend';
+import { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 import {
   initReactI18next,
   useTranslation as useTranslationOrg,
@@ -9,11 +14,6 @@ import {
   UseTranslationResponse,
   FallbackNs,
 } from 'react-i18next';
-import { useCookies } from 'react-cookie';
-import resourcesToBackend from 'i18next-resources-to-backend';
-// import LocizeBackend from 'i18next-locize-backend'
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { getOptions, languages, cookieName } from './settings';
 
 const runsOnServerSide = typeof window === 'undefined';
 
