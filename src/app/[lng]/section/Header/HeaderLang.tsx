@@ -12,13 +12,13 @@ interface HeaderLangProps {
 
 function HeaderLang({ i18n, lng, path = '' }: HeaderLangProps) {
   const t = i18n.getFixedT(lng, 'header');
-  const handleLangChange = () => {
+  const languageChange = () => {
     console.log(lng);
   };
 
   return (
     <div>
-      <GlobalImg onClick={handleLangChange()} />
+      <GlobalImg onClick={languageChange()} />
       {languages
         .filter((l) => lng !== l)
         .map((l, index) => {
